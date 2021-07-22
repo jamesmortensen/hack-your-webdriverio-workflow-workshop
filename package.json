@@ -1,0 +1,23 @@
+{
+  "name": "hack-your-webdriverio-workflow-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.7.7",
+    "@wdio/cli": "^7.7.8",
+    "@wdio/local-runner": "^7.7.8",
+    "@wdio/mocha-framework": "^7.7.7",
+    "@wdio/spec-reporter": "^7.7.7",
+    "@wdio/sync": "^7.7.8",
+    "chromedriver": "^91.0.1",
+    "wdio-chromedriver-service": "^7.2.0",
+    "wdio-video-reporter": "^3.1.2"
+  }
+}
