@@ -2,3 +2,4 @@ node_modules
 _results_
 allure-results
 allure-report
+.DS_Store
