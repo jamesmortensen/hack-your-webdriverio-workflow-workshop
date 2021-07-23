@@ -22,8 +22,8 @@ describe('Tests on waiting for an element to appear - 1', () => {
         DynamicLoading1.startButton.click();
 
         const helloText = DynamicLoading1.helloWorldElem.getText();
-        //expectChai(helloText).to.equal('Hello World!');
-        expect(DynamicLoading1.helloWorldElem).toBeDisplayed();
+        expectChai(helloText).to.equal('Hello World!');
+        //expect(DynamicLoading1.helloWorldElem).toBeDisplayed();
 
     })
 });
