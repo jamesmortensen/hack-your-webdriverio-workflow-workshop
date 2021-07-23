@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -16,8 +17,16 @@
     "@wdio/mocha-framework": "^7.7.7",
     "@wdio/spec-reporter": "^7.7.7",
     "@wdio/sync": "^7.7.8",
+    "chai": "^4.3.4",
     "chromedriver": "^91.0.1",
+    "eslint": "^7.31.0",
+    "eslint-plugin-import": "^2.23.4",
+    "tracer": "^1.1.5",
     "wdio-chromedriver-service": "^7.2.0",
+    "wdio-eslinter-service": "0.0.2",
     "wdio-video-reporter": "^3.1.2"
+  },
+  "dependencies": {
+    "wdio-docker-service": "^3.1.2"
   }
 }

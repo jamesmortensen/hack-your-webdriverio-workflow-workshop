@@ -7,7 +7,7 @@ describe('Tests on waiting for an element to appear - 1', () => {
 
     beforeEach('should login with valid credentials', () => {
         LoginPage.open();
-        console.info('test test test');
+        logger.info('test test test');
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
         expect(SecurePage.flashAlert).toBeExisting();
@@ -22,8 +22,8 @@ describe('Tests on waiting for an element to appear - 1', () => {
         DynamicLoading1.startButton.click();
 
         const helloText = DynamicLoading1.helloWorldElem.getText();
-        //expectChai(helloText).to.equal('Hello World!');
-        expect(DynamicLoading1.helloWorldElem).toBeDisplayed();
+        expectChai(helloText).to.equal('Hello World!');
+        //expect(DynamicLoading1.helloWorldElem).toBeDisplayed();
 
     })
 });

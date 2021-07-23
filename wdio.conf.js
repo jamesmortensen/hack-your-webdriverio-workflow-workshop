@@ -90,6 +90,11 @@ exports.config = {
     //     webdriver: 'info',
     //     '@wdio/appium-service': 'info'
     // },
+     /**
+     * Level of logging verbosity for the logger statements inside your spec files, 
+     * page objects, and step files: // trace|debug|log|info|warn|error
+     */
+      specLogLevel: 'log',
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
@@ -115,7 +120,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['chromedriver', 'eslinter'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -200,8 +205,10 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        global.logger = require('./utils/logger');
+        global.expectChai = require('chai').expect;
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
