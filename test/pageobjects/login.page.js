@@ -24,7 +24,7 @@ class LoginPage extends Page {
         this.inputPassword.setValue(password);
 
         this.btnSubmit.click();
-        console.debug('We clicked the submit button...');
+        logger.debug('We clicked the submit button...');
 
         reporter.addStep('This is a step that failed', [], 'failed');
         reporter.addStep('This is a step that broke', [], 'broken');

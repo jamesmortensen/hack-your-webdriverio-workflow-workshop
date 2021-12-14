@@ -29,6 +29,6 @@ describe('Test inputs page', () => {
     it('should not allow any other special characters', () => {
         browser.keys(['~', '!', '@', '#', '$', '%', '^', '&', '-', '*', '*', '(', ')', '+', '=']);
         expect(inputElem).toHaveValue('');
-        console.log(inputElem.getValue())
+        logger.log(inputElem.getValue())
     })
 })

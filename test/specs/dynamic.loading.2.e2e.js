@@ -7,7 +7,7 @@ describe('Tests on waiting for an element to appear - 2', () => {
 
     beforeEach('should login with valid credentials', () => {
         LoginPage.open();
-        console.info('test test test');
+        logger.info('test test test');
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
         expect(SecurePage.flashAlert).toBeExisting();

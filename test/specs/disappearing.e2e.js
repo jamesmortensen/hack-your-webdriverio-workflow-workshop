@@ -6,7 +6,7 @@ const DisappearingPage = require('../pageobjects/disappearing.page');
 describe('Menu Button Tests', () => {
     beforeEach('should login with valid credentials', () => {
         LoginPage.open();
-        console.info('test test test');
+        logger.info('test test test');
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
         expect(SecurePage.flashAlert).toBeExisting();

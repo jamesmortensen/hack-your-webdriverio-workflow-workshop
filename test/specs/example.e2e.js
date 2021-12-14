@@ -7,7 +7,7 @@ describe('My Login application', () => {
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
 
-        console.debug('handled the error...');
+        logger.debug('handled the error...');
         expect(SecurePage.flashAlert).toBeExisting();
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
